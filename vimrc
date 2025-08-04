@@ -44,6 +44,12 @@ endfunction
 command FzfOpen call FzfOpenFn()
 cnoreabbrev fz FzfOpen
 
+command ShowSignature call CocActionAsync('doHover')
+cnoreabbrev sign ShowSignature
+
+command OpenVimrc execute 'edit ' . expand('~/.vimrc')
+command Reload execute 'source ' . expand('~/.vimrc')
+
 runtime! ftplugin/man.vim
 
 let g:coc_global_extensions = ['coc-pyright', 'coc-clangd', 'coc-vimlsp']

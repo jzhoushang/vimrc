@@ -9,7 +9,7 @@ ifneq (,$(wildcard ~/.vimrc))
 	mv ~/.vimrc ~/.vimrc.old
 endif
 	cp -f ./vimrc ~/.vimrc
-	vim -c "PlugInstall" -c "qa\!"
+	vim -c "PlugInstall" -c "qa!"
 
 update:
 	cp -f ~/.vimrc ./vimrc

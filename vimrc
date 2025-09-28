@@ -1,15 +1,20 @@
 set encoding=utf-8
 set signcolumn=yes
 
+set ttimeoutlen=10
 set mouse=a
 
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set ttimeoutlen=10
 
 set number relativenumber
 set cursorline
+
+set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.,eol:$
+set nolist
+command Whitespace set list!
+cnoreabbrev ws Whitespace
 
 cnoreabbrev dir :Ex
 autocmd FileType netrw setlocal number relativenumber
